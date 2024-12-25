@@ -1,0 +1,32 @@
+.wp-block-gbc-blocks-countdown-timer {
+	display: flex;
+	align-items: center;
+	text-align: center;
+
+	> div {
+		padding: 0 10px;
+		display: flex;
+		flex-direction: column;
+		line-height: 1.2;
+
+		@media (max-width: 991px) {
+			padding: 0 10px;
+		}
+
+		span {
+			color: #f1634c;
+			white-space: nowrap;
+
+			&:first-child {
+				font-size: 1.125rem;
+				font-weight: 900;
+				line-height: 1;
+			}
+
+			&:last-child {
+				font-size: 14px;
+				color: #fff;
+			}
+		}
+	}
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "title": "Countdown Timer",
+  "name": "gbc-blocks/countdown-timer",
+  "category": "gbc-blocks",
+  "description": "A customizable countdown timer that allows users to set an end date, and customize the digit and label colors for a personalized countdown experience.",
+  "attributes": {
+    "endDate": {
+      "type": "string",
+      "default": ""
+    },
+    "digitColor": {
+      "type": "string",
+      "default": "#f1634c"
+    },
+    "labelColor": {
+      "type": "string",
+      "default": "#f1634c"
+    }
+  },
+  "editorScript": "file:./index.js",
+  "viewScript": "file:./view.js",
+  "style": "file:./style-index.css"
+}
