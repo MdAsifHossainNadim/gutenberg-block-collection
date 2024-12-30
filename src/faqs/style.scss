@@ -1,0 +1,95 @@
+.wp-block-gbc-blocks-faqs {
+	width: 100%;
+	--faq-bg-color: #f8f9f8;
+	--faq-bg-hover-color: #f1f1f1;
+	--faq-bg-active-color: #f8f9f8;
+	--faq-title-color: #25252d;
+	--faq-title-font-size: "1.125rem";
+	--faq-title-hover-color: #25252d;
+	--faq-title-active-color: #fff;
+	--faq-desc-color: #393939;
+	--faq-content-font-size: "1.125rem";
+	--faq-desc-active-color: #fff;
+	--faq-icon-color: #1e1e1e;
+	--faq-icon-hover-color: #7047eb;
+	--faq-icon-active-color: #7047eb;
+
+	.gbc-faq {
+		position: relative;
+		border-radius: 10px;
+		background-color: var(--faq-bg-color);
+		padding: 1.25rem;
+		margin-bottom: 1rem;
+		overflow: hidden;
+		transition: all 0.25s;
+
+		@media (min-width: 768px) {
+			padding: 2rem;
+		}
+
+		&:hover {
+			background-color: var(--faq-bg-hover-color);
+
+			svg path {
+				fill: var(--faq-icon-hover-color);
+				stroke: var(--faq-icon-hover-color);
+			}
+		}
+
+		&-active {
+			transition: all 0.25s;
+			background-color: var(--faq-bg-active-color);
+
+			svg path {
+				fill: var(--faq-icon-active-color);
+				stroke: var(--faq-icon-active-color);
+			}
+
+			.gbc-faq-description {
+				opacity: 1;
+				visibility: visible;
+				height: auto;
+				margin-top: 2rem;
+			}
+		}
+
+		&-title {
+			position: relative;
+			color: var(--faq-title-color);
+			font-size: var(--faq-title-font-size);
+			font-weight: 600;
+			line-height: 1.38;
+			padding-right: 3rem;
+		}
+
+		&-description {
+			color: var(--faq-desc-color);
+			font-size: var(--faq-content-font-size);
+			line-height: 1.38;
+			height: 0;
+			opacity: 0;
+			visibility: hidden;
+
+			@media (min-width: 768px) {
+				padding-right: 1.5rem;
+			}
+		}
+
+		ul {
+			list-style-type: none;
+		}
+
+		svg {
+			position: absolute;
+			right: 2rem;
+			top: 2.25rem;
+		}
+	}
+
+	&.wp-block {
+
+		svg {
+			right: 3rem;
+		}
+	}
+}

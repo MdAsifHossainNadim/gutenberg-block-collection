@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "gbc-blocks/customer-feedback",
+	"version": "1.0",
+	"title": "Customer Feedback",
+	"category": "gbc-blocks",
+	"icon": "dashicons dashicons-testimonial",
+	"description": "Customer Feedback slider block",
+	"example": {},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "customer-feedback-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}

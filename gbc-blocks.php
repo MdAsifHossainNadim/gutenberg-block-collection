@@ -119,7 +119,11 @@ final class GBC_Blocks {
 	 */
 	public function register_blocks() {
 		$blocks = [
+			'faqs',
+			'pricing',
 			'countdown',
+			'counter-animation',
+			'customer-feedback',
 		];
 
 		foreach ( $blocks as $block ) {

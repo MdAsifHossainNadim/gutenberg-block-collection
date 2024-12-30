@@ -1,0 +1,98 @@
+.gbc_price {
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 120%;
+    color: #0A253F;
+    display: block;
+    padding-bottom: 8px;
+
+    @media (max-width: 767px) {
+        font-size: 28px;
+
+    }
+
+    &.line-throw {
+        font-size: 24px;
+        color: #A5AFB8;
+        text-decoration: line-through;
+        font-weight: 700;
+        margin-bottom: 5px;
+
+        @media (max-width: 767px) {
+            font-size: 24px;
+            
+        }
+
+    }
+
+}
+
+.yearly-discount {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+
+    .gbc_price {
+        line-height: 20px;
+
+    }
+
+    .yearly-price {
+        .decimal {
+            font-size: 18px;
+            top: -14px;
+        }
+    }
+}
+
+.yearly-text {
+    font-size: 18px;
+    font-weight: 400;
+    padding-left: 5px;
+    color: #BBBFC8;
+
+}
+
+.discount-help-text {
+    font-size: 16px;
+    color: #20684B;
+    font-weight: 400;
+    line-height: 24px;
+    background: #DCFCE7;
+    border-radius: 10px;
+    padding: 6px 12px;
+    display: inline-block;
+    margin-top: 12px;
+
+}
+
+.billed-regular-price {
+    margin-top: 20px;
+
+    span {
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 400;
+        text-align: left;
+        margin-bottom: 33px;
+        color: #1e293b;
+
+        &.yearly-text {
+            font-weight: 700;
+        }
+    }
+}
+
+.build-yearly-text {
+    color: #3B5261;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    padding-top: 24px;
+
+    span.price {
+        font-weight: 700;
+        margin-left: 4px;
+
+    }
+}

@@ -1,0 +1,70 @@
+{
+    "$schema": "https://json.schemastore.org/block.json",
+    "apiVersion": 3,
+    "title": "Faqs",
+    "description": "Answers to common questions, providing clarity and guidance on various topics.",
+    "name": "gbc-blocks/faqs",
+    "category": "gbc-blocks",
+    "attributes": {
+        "faqs": {
+            "type": "array",
+            "default": [
+                {
+                    "id": 1,
+                    "question": "What is FAQ?",
+                    "answer": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, eveniet?"
+                }
+            ]
+        },
+        "globalColors": {
+            "type": "object",
+            "default": {
+                "bgColor": "#f8f9f8",
+                "bgHoverColor": "#f1f1f1",
+                "bgActiveColor": "#f8f9f8"
+            }
+        },
+        "titleFontSize": {
+            "type": "string",
+            "default": "1.125rem"
+        },
+        "titleColors": {
+            "type": "object",
+            "default": {
+                "defaultColor": "#25252d",
+                "hoverTextColor": "#25252d",
+                "activeTextColor": "#25252d"
+            }
+        },
+        "contentFontSize": {
+            "type": "string",
+            "default": "1.125rem"
+        },
+        "contentColors": {
+            "type": "object",
+            "default": {
+                "defaultColor": "#393939",
+                "hoverTextColor": "#393939",
+                "activeTextColor": "#393939"
+            }
+        },
+        "iconSize": {
+            "type": "string",
+            "default": "21px"
+        },
+        "iconColors": {
+            "type": "object",
+            "default": {
+                "defaultColor": "#1e1e1e",
+                "hoverIconColor": "#7047eb",
+                "activeIconColor": "#7047eb"
+            }
+        }
+    },
+    "supports": {
+        "anchor": true
+    },
+    "editorScript": "file:./index.js",
+    "viewScript":"file:./view.js",
+    "style": "file:./style-index.css"
+}
