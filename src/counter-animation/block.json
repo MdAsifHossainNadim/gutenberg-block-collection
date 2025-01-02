@@ -85,5 +85,6 @@
   },
   "editorScript": "file:./index.js",
   "style": "file:./style-index.css",
-  "viewScript": "file:./view.js"
+  "viewScript": "file:./view.js",
+  "script": "gbc-blocks-counter-animation"
 }

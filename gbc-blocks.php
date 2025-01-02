@@ -16,14 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-require_once __DIR__ . '/vendor/autoload.php';
-
-// Use the necessary namespace.
-use \GBC\Blocks\Traits\GBCUtilityTrait;
-
 final class GBC_Blocks {
-
-	use GBCUtilityTrait;
 
 	/**
 	 * Plugin version.
@@ -92,10 +85,7 @@ final class GBC_Blocks {
 	 * @return void
 	 */
 	private function init_hooks() {
-//		add_action( 'init', [ $this, 'load_textdomain' ] );
 		add_action( 'init', [ $this, 'register_blocks' ] );
-//		add_action( 'wp_enqueue_scripts', [ $this, 'frontend_assets' ] );
-//		add_action( 'enqueue_block_editor_assets', [ $this, 'editor_assets' ] );
 		add_filter( 'block_categories_all', [ $this, 'register_block_category' ] );
 	}
 
@@ -123,54 +113,18 @@ final class GBC_Blocks {
 			'pricing',
 			'countdown',
 			'list-item',
-//			'video-popup',
+			'video-popup',
 			'subscribe-field',
 			'counter-animation',
 			'customer-feedback',
 		];
 
 		foreach ( $blocks as $block ) {
-			$this->register_block( $block );
+			register_block_type( GBC_PATH . '/build/' . $block );
+			wp_set_script_translations( 'gbc-blocks-' . $block, 'gbc-blocks', GBC_PATH . '/languages' );
 		}
-	}
 
-	/**
-	 * Enqueue editor assets.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @return void
-	 */
-	public function editor_assets() {
-		wp_enqueue_script(
-			'gbc-editor-script',
-			GBC_ASSETS . '/js/editor.js',
-			[ 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-editor' ],
-			GBC_VERSION
-		);
-
-		wp_enqueue_style(
-			'gbc-editor-style',
-			GBC_ASSETS . '/css/editor.css',
-			[ 'wp-edit-blocks' ],
-			GBC_VERSION
-		);
-	}
-
-	/**
-	 * Enqueue frontend assets.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @return void
-	 */
-	public function frontend_assets() {
-		wp_enqueue_style(
-			'gbc-style',
-			GBC_ASSETS . '/css/style.css',
-			[],
-			GBC_VERSION
-		);
+		load_plugin_textdomain( 'gbc-blocks', false, dirname( plugin_basename( GBC_FILE ) ) . '/languages' );
 	}
 
 	/**

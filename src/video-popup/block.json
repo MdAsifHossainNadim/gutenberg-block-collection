@@ -1,0 +1,43 @@
+{
+    "$schema": "https://json.schemastore.org/block.json",
+    "apiVersion": 3,
+    "title": "Video Popup",
+    "name": "gbc-blocks/video-popup",
+    "category": "gbc-blocks",
+    "supports": {
+        "__experimentalOnEnter": true,
+        "__experimentalSettings": true,
+        "html": false
+    },
+    "attributes": {
+        "isPlayButton": {
+            "type": "boolean",
+            "default": true
+        },
+        "colorIcon": {
+            "type": "boolean",
+            "default": true
+        },
+        "alt": {
+            "type": "html",
+            "default": ""
+        },
+        "url": {
+            "type": "string",
+            "default": ""
+        },
+        "id": {
+            "type": "integer",
+            "default": ""
+        },
+        "videoUrl": {
+            "type": "html",
+            "default": ""
+        }
+    },
+
+    "icon": "dashicons dashicons-format-video",
+    "editorScript": "file:./index.js",
+    "viewScript": "file:./view.js",
+    "style": "file:./style-index.css"
+}

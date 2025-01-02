@@ -39,5 +39,6 @@
     "icon": "dashicons dashicons-editor-table",
     "editorScript": "file:./index.js",
     "viewScript":"file:./view.js",
-    "style": "file:./style-index.css"
+    "style": "file:./style-index.css",
+    "script": "gbc-blocks-list-item"
 }

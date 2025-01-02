@@ -30,8 +30,8 @@
             "default": true
         }
     },
-
     "icon": "dashicons dashicons-editor-table",
     "editorScript": "file:./index.js",
-    "style": "file:./style-index.css"
+    "style": "file:./style-index.css",
+    "script": "gbc-blocks-subscribe-field"
 }

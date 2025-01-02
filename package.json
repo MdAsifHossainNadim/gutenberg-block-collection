@@ -12,7 +12,8 @@
 		"lint:js": "wp-scripts lint-js",
 		"packages-update": "wp-scripts packages-update",
 		"plugin-zip": "wp-scripts plugin-zip",
-		"start": "wp-scripts start"
+		"start": "wp-scripts start",
+		"makepot": "wp i18n make-pot . languages/gbc-blocks.pot --exclude=\"node_modules,vendor,build,assets\" --include=\"src,*.php,block.json\" --headers='{\"Report-Msgid-Bugs-To\":\"https://github.com/MdAsifHossainNadim/gutenberg-block-collection/issues\"}' --domain=gbc-blocks"
 	},
 	"devDependencies": {
 		"@wordpress/icons": "^9.29.0",
