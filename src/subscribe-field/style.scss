@@ -1,0 +1,108 @@
+.wp-block-gbc-blocks-subscribe-field {
+    form {
+        position: relative;
+
+    }
+    .email-field {
+        position: relative;
+        display: flex;
+        gap: 16px;
+
+        @media (max-width: 767px) {
+            display: block;
+            
+        }
+
+        &.layout-2 {
+            input[type="email"] {
+                border: 1px solid #E5E9ED;
+                border-radius: 60px;
+                padding-left: 20px;
+
+                &::placeholder {
+                    color: #93ABD0;
+
+                }
+            }
+        }
+
+        .message-icon {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 11px;
+            line-height: 0;
+
+        }
+
+        &:has(> .message-icon) {
+            input[type="email"] {
+                padding-left: 40px;
+
+            }
+        }
+
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            background: #fff;
+            border-radius: 6px;
+            border: 1px solid #6a6aff;
+
+            @media (max-width: 767px) {
+               margin-bottom: 20px;
+            }
+        }
+    }
+
+    .btn-icon {
+        background: transparent;
+        position: absolute;
+        top: 50%;
+        right: 28px;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transform: translateY(-50%);
+        line-height: 0;
+
+    }
+
+    .btn.btn-primary {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        border: 1px solid #6b69f7;
+        color: #fff;
+        transform: translateY(-50%);
+        background: #6b69f7;
+        border-top-right-radius: 6px;
+        border-bottom-right-radius: 6px;
+
+        &:hover {
+            background: #4646e9;
+            border: 1px solid #4646e9;
+        }
+
+    }
+
+    .subscribe-btn {
+        background: #6A6AFF;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 28px;
+        border-radius: 60px;
+        padding: 15px 32px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #fff;
+        border: 1px solid #6A6AFF;
+
+        &:hover {
+            background: #4646e9;
+            border: 1px solid #4646e9;
+        }
+
+    }
+}

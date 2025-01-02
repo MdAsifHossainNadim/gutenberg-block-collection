@@ -122,6 +122,9 @@ final class GBC_Blocks {
 			'faqs',
 			'pricing',
 			'countdown',
+			'list-item',
+//			'video-popup',
+			'subscribe-field',
 			'counter-animation',
 			'customer-feedback',
 		];

@@ -1,0 +1,43 @@
+{
+    "$schema": "https://json.schemastore.org/block.json",
+    "apiVersion": 3,
+    "title": "Advance List Item",
+    "name": "gbc-blocks/list-item",
+    "category": "gbc-blocks",
+    "attributes": {
+        "listItem": {
+            "type": "string",
+            "default": ""
+        },
+        "enableTooltip": {
+            "type": "boolean",
+            "default": false
+        },
+        "tooltipContent": {
+            "type": "string",
+            "default": ""
+        },
+        "style": {
+			"type": "object",
+			"default": {
+				"color": {
+					"text": "#374151"
+				}
+			}
+		}
+    },
+    "supports": {
+        "color": {
+            "background": false,
+            "text": true
+        },
+        "html": false,
+        "typography": {
+            "fontSize": true
+        }
+    },
+    "icon": "dashicons dashicons-editor-table",
+    "editorScript": "file:./index.js",
+    "viewScript":"file:./view.js",
+    "style": "file:./style-index.css"
+}

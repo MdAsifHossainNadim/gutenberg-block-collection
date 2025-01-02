@@ -1,0 +1,37 @@
+{
+    "$schema": "https://json.schemastore.org/block.json",
+    "apiVersion": 3,
+    "title": "Subscribe Field",
+    "name": "gbc-blocks/subscribe-field",
+    "category": "gbc-blocks",
+    "attributes": {
+        "action":{
+			"type": "string",
+			"default": "#"
+		},
+        "buttonText": {
+            "type": "string",
+            "default": "Send"
+        },
+        "placeholderText": {
+            "type": "string",
+            "default": "Email Address"
+        },
+        "isRequired": {
+            "type": "boolean",
+            "default": true
+        },
+        "enableButtonText": {
+            "type": "boolean",
+            "default": false
+        },
+        "disableMessageIcon": {
+            "type": "boolean",
+            "default": true
+        }
+    },
+
+    "icon": "dashicons dashicons-editor-table",
+    "editorScript": "file:./index.js",
+    "style": "file:./style-index.css"
+}

@@ -1,0 +1,130 @@
+.wp-block-gbc-blocks-list-item {
+    .gbc-adv-list-item {
+        margin: 0;
+        padding: 0;
+
+        li {
+            list-style: none;
+            font-weight: 500;
+            border-bottom: 1px solid #EAF0F6;
+
+            span {
+                line-height: 24px;
+                font-weight: 400;
+            }
+
+            @media (max-width: 767px) {
+                position: relative;
+                display: flex;
+                align-items: center;
+
+                span {
+                    display: block;
+                }
+
+                .tooltipContent[class] {
+                    width: 170px;
+                    left: auto;
+                    right: -10px;
+                    transform: none;
+                }
+            }
+
+        }
+
+    }
+
+    &:last-child {
+        li {
+            padding-bottom: 0;
+            border-bottom: 0;
+
+        }
+
+    }
+
+    .tooltipContent[class] {
+        position: absolute;
+        left: 50%;
+        bottom: calc(100% + 20px);
+        z-index: 1;
+        width: 180px;
+        background: linear-gradient(0deg, #27253c, #0a0b31), linear-gradient(88deg, #242332 -0.34%, #161b3b 99.66%);
+        color: #fff;
+        overflow-wrap: break-word;
+        border-radius: 15px;
+        padding: 16px 24px;
+        transform: translateX(-50%);
+        visibility: hidden;
+        opacity: 0;
+        font-family: "Matter Regular", sans-serif;
+        border: 1px solid #42465D;
+
+        @media (max-width: 757px) {
+            width: 100%;
+            bottom: 40px;
+            padding: 14px 18px;
+
+        }
+
+        @media (min-width: 758px) and (max-width: 1024px) {
+            width: 13rem;
+
+        }
+
+        p {
+            text-align: left;
+            font-size: 14px;
+            line-height: 24px;
+            font-family: 'Matter Regular', sans-serif;
+        }
+
+        &:after {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -10px;
+            border-width: 10px;
+            border-style: solid;
+            border-color: transparent;
+            border-top-color: #42465D;
+            content: "";
+
+            @media (max-width: 757px) {
+                left: auto;
+                right: 12px;
+
+            }
+        }
+
+        p {
+            color: #ffffff !important;
+            margin-bottom: 0;
+
+        }
+
+    }
+
+    .tooltipIcon {
+        display: inline-block;
+        margin-left: 15px;
+        position: relative;
+        top: 5px;
+
+        p {
+            margin-bottom: 0;
+
+        }
+
+    }
+
+    .tooltipIcon {
+        &:hover {
+            .tooltipContent {
+                opacity: 1;
+                visibility: visible;
+
+            }
+        }
+    }
+}
